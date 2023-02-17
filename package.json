@@ -1,18 +1,47 @@
 {
-  "name": "absolute-pitch",
+  "name": "absolutepitch",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start -p ${PORT:=3000}",
+    "build": "next build && next export",
+    "prettier": "prettier --write '**/*.{js,css,html}'",
+    "clear-all": "rimraf ./.cache ./.next ./node_modules"
   },
   "dependencies": {
-    "eslint": "8.34.0",
-    "eslint-config-next": "13.1.6",
-    "next": "13.1.6",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/styles": "^4.11.5",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.10.1",
+    "@mui/styles": "^5.10.2",
+    "@react-spring/parallax": "^9.6.1",
+    "bootstrap": "^5.0.0-alpha3",
+    "components": "^0.1.0",
+    "cookies-next": "^2.1.1",
+    "css-loader": "^6.7.3",
+    "file-loader": "^6.2.0",
+    "get-audio-duration": "^3.1.1",
+    "jquery": "^3.6.3",
+    "next": "^12.2.5",
+    "react": "^18.2.0",
+    "react-colour-wheel": "^1.0.7",
+    "react-data-table-component": "^7.5.3",
+    "react-dom": "18.2.0",
+    "react-nl2br": "^1.0.4",
+    "react-player": "^2.11.0",
+    "react-scroll-parallax": "^3.3.2",
+    "react-video-js-player": "^1.1.1",
+    "reactjs-media": "^2.2.0",
+    "style-loader": "^3.3.1",
+    "styled": "^1.0.0",
+    "styled-components": "^5.3.6",
+    "url-loader": "^4.1.1"
+  },
+  "devDependencies": {
+    "eslint": "8.22.0",
+    "eslint-config-next": "12.2.5"
   }
 }
